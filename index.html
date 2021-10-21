@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Web App</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="img-container">
+            <img src="/assets/logo.png"/>
+        </div>
+        <nav></nav>
+    </header>
+    <main>
+        <div class="input-container">
+            <div id="msg">What do you want to get done today?</div>
+            <label for="task"></label>
+            <input type="text" id="userinput" name="task" placeholder="Add your first task!">
+            <input type="button" value="Add" onclick="tasklist()">
+        </div>
+        <div class="container">
+            <div class="title">Shopping List</div>
+            <!-- To Do List -->
+            <div class="todo">To Do's</div>
+                <div id="todolist">
+                    <!-- Add List Item for To Do -->
+                </div>
+               <!-- Done List -->
+               <!--
+               <div class="done">Done</div>
+               <ul>
+                   <li>Sell Flowers</li>
+                   <li>Pay Bills</li>
+                   <li>Fix Oil Gas</li>
+               </ul>
+               -->
+        </div>
+    </main>
+    <footer></footer>
+</body>
+<script src="main.js"></script>
+</html>
