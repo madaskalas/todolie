@@ -29,6 +29,9 @@ body {
     font-style: italic;
     margin-bottom: 1rem;
 }
+
+/* Input */ 
+
 input[type=text] {
     width: 25%;
     height: 2rem;
@@ -43,14 +46,14 @@ input[type=button] {
 input[type=button]:hover {
     cursor: pointer;
 }
-.container {
+#container {
     margin: 0 auto;
     width: 90%;
     height: 625px;
-    background-color: rgba(240, 158, 8, 0.75);
-    border: 1px solid black;
+    background-color: rgba(240, 158, 8, 0.65);
     position: relative;
     top: 1rem;
+    display: none;
 }
 .title {
     text-align: center;

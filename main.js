@@ -8,4 +8,9 @@ function tasklist() {
     let li = document.createElement("li");
     ul.appendChild(li);
     li.innerHTML = task;
+    document.getElementById("userinput").value = "";
+    document.getElementById("container").style.display = "block";
+}
+function reset() {
+    location.reload();
 }
