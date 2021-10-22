@@ -65,8 +65,7 @@ input[type="checkbox"] {
     border-bottom: 1px solid grey;
 }
 label {
-    margin: 1rem;
-    
+    margin: 1.5rem;
 }
 #container {
     margin: 0 auto;
