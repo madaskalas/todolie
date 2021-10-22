@@ -37,14 +37,36 @@ input[type=text] {
     height: 2rem;
     text-align: center;
     font-size: 110%;
+    border-radius: 4px;
 }
 input[type=button] {
     padding: 0.4rem;
     background-color: black;
     color: white;
+    border-radius: 4px;
 }
 input[type=button]:hover {
     cursor: pointer;
+}
+input[type="checkbox"] {
+    text-align: center;
+    font-size: 120%;
+    margin: 0 auto;
+    border-bottom: 1px solid grey;
+    margin-bottom: 0.5rem;
+    background-color: lightgrey;
+}
+#todolist {
+    text-align: center;
+    font-size: 150%;
+    background-color: lightgray;
+    margin: 0 auto;
+    width: 70%;
+    border-bottom: 1px solid grey;
+}
+label {
+    margin: 1rem;
+    
 }
 #container {
     margin: 0 auto;
@@ -70,12 +92,24 @@ input[type=button]:hover {
     font-weight: bold;
     padding: 1rem;
 }
-ul,li {
+/*
+ul{
     text-align: center;
     list-style-type: none;
-    border: 1px solid grey;
     font-size: 120%;
+    margin: 0 auto;
 }
+li {
+    text-align: center;
+    list-style-type: none;
+    border-bottom: 1px solid grey;
+    font-size: 120%;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    width: 70%;
+    background-color: lightgrey;
+}
+*/
 
 /* Responsive Design */
 
