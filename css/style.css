@@ -39,7 +39,12 @@ input[type=text] {
     font-size: 110%;
     border-radius: 4px;
 }
+input[type=text]:hover {
+    background-color: rgba(240, 158, 8, 0.65);
+}
 input[type=button] {
+    width: 5rem;
+    height: 2.2rem;
     padding: 0.4rem;
     background-color: black;
     color: white;
@@ -56,7 +61,7 @@ input[type="checkbox"] {
     margin-bottom: 0.5rem;
     background-color: lightgrey;
 }
-#todolist {
+#todolist, #donelist {
     text-align: center;
     font-size: 150%;
     background-color: lightgray;
@@ -91,24 +96,6 @@ label {
     font-weight: bold;
     padding: 1rem;
 }
-/*
-ul{
-    text-align: center;
-    list-style-type: none;
-    font-size: 120%;
-    margin: 0 auto;
-}
-li {
-    text-align: center;
-    list-style-type: none;
-    border-bottom: 1px solid grey;
-    font-size: 120%;
-    margin: 0 auto;
-    margin-bottom: 0.5rem;
-    width: 70%;
-    background-color: lightgrey;
-}
-*/
 
 /* Responsive Design */
 

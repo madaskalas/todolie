@@ -17,16 +17,22 @@
     <main>
         <div class="input-container">
             <div id="msg">What do you want to get done today?</div>
-            <label for="task"></label>
-            <input type="text" id="userinput" name="task" placeholder="Add your first task!">
-            <input type="button" value="Add" id="btn" onclick="tasklist()">
-            <input type="button" value="Reset" onclick="reset()">
+            <form>
+                <label for="task"></label>
+                <input type="text" id="userinput" name="task" placeholder="e.g Pay Bills...">
+                <input type="button" value="Add" id="btn" onclick="tasklist()">
+                <!-- <input type="button" value="Reset" onclick="reset()"> -->
+            </form>
         </div>
         <div id="container">
-            <div class="title">Shopping List</div>
+            <!-- <div class="title">Shopping List</div> -->
             <!-- To Do List -->
             <div class="todo">To Do's</div>
                 <div id="todolist">
+                    <!-- Add List Item for To Do -->
+                </div>
+                <div class="todo">Done</div>
+                <div id="donelist">
                     <!-- Add List Item for To Do -->
                 </div>
         </div>
