@@ -1,55 +1,66 @@
+// Create empty array
 let arrList = [];
 
+// Trigger on button "Add"
 function tasklist() {
+
+    // Fetch value of input text
     let task = document.getElementById("userinput").value;
+
+    // Select DIV
     let todolist = document.querySelector(".todolist");
 
+    // Clears text input
     document.getElementById("userinput").value = "";
+
+    // Shows container
     document.getElementById("container").style.display = "block";
 
-    // Create checkbox element
+    // Create input element
     let input = document.createElement("input");
 
+    let random = Math.floor(Math.random() * 888);
+    let randomClass = "cl" + Math.floor(Math.random() * 777);
     // Assign attributes
     input.type = "checkbox";
     input.name = "checklist";
-    input.value = "item";
-    input.id = "checkid";
+    input.value = task;
+    input.id = random;
+    // input.className = "checkclass";
     input.className = "checkclass";
 
-    // Assign label
+    // Create label element
     let label = document.createElement("label");
+
+    // Assign label
     label.htmlFor = "checkid";
     label.id = "labelid";
     label.className = "labelclass";
 
-    // Append child
+    // Append childs
     label.appendChild(document.createTextNode(task));
-
     todolist.appendChild(input);
     todolist.appendChild(label);
 
+    // Create br element
     let br = document.createElement("br");
+
+    // Append child
     todolist.appendChild(br);
 
     const cb = document.querySelector(".checkclass");
     cb.onclick = () => {
         const res = cb.checked;
         if (res) {
-            document.querySelector(".labelclass").style.textDecoration = "line-through";
-            // Push into todo querySelector items
-            arrList.push(task);
-            console.log(arrList);
+            console.log(`ID: ${input.id} /  Is checked?: ${res}`);
         }
         else {
-            document.querySelector(".labelclass").style.textDecoration = "none";
+            console.log(`ID: ${input.id} /  Is checked?: ${res}`);
         }
-    };
+    }
 }
-function storeList() {
-    arrList.push(task);
-    console.log(arrList);
-}
+
+// Reloads the webpage
 function reset() {
     location.reload();
 }
