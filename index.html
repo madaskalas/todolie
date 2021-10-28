@@ -20,18 +20,20 @@
             <form>
                 <label for="task"></label>
                 <input type="text" id="userinput" name="task" placeholder="e.g Pay Bills...">
-                <input type="button" value="Add" id="btn" onclick="tasklist()">
-                <!-- <input type="button" value="Reset" onclick="reset()"> -->
+                <input type="button" value="Add" id="btn" onclick="tasklist()" title="✔️ Adds an item to list">
+                <button onclick="reset()" title="🔃 Refreshes the page">Reset</button>
             </form>
+            
         </div>
         <div id="container">
             <!-- <div class="title">Shopping List</div> -->
             <!-- To Do List -->
             <div class="todo">To Do's</div>
-                <div id="todolist">
+                <div class="todolist">
                     <!-- Add List Item for To Do -->
                 </div>
-                <div class="todo">Done</div>
+                <!--
+                <div class="todo">Done</div> -->
                 <div id="donelist">
                     <!-- Add List Item for To Do -->
                 </div>

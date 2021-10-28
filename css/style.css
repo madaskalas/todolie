@@ -17,6 +17,9 @@ body {
 .img-container {
     text-align: center;
 }
+img {
+    width: 200px;
+}
 
 /* Main */
 
@@ -42,7 +45,7 @@ input[type=text] {
 input[type=text]:hover {
     background-color: rgba(240, 158, 8, 0.65);
 }
-input[type=button] {
+input[type=button], button {
     width: 5rem;
     height: 2.2rem;
     padding: 0.4rem;
@@ -50,7 +53,7 @@ input[type=button] {
     color: white;
     border-radius: 4px;
 }
-input[type=button]:hover {
+input[type=button]:hover, button:hover {
     cursor: pointer;
 }
 input[type="checkbox"] {
@@ -61,7 +64,7 @@ input[type="checkbox"] {
     margin-bottom: 0.5rem;
     background-color: lightgrey;
 }
-#todolist, #donelist {
+.todolist, #donelist {
     text-align: center;
     font-size: 150%;
     background-color: lightgray;
@@ -75,11 +78,12 @@ label {
 #container {
     margin: 0 auto;
     width: 90%;
-    height: 625px;
-    background-color: rgba(240, 158, 8, 0.65);
+    height: 425px;
+    background-color: rgba(170, 168, 163, 0.65);
     position: relative;
     top: 1rem;
     display: none;
+    border-radius: 7px;
 }
 .title {
     text-align: center;
