@@ -75,14 +75,23 @@ input[type="checkbox"] {
 label {
     margin: 1.5rem;
 }
-#container {
+#containertodo {
     margin: 0 auto;
-    width: 90%;
-    height: 425px;
+    width: 75%;
+    height: 300px;
     background-color: rgba(170, 168, 163, 0.65);
     position: relative;
     top: 1rem;
     display: none;
+    border-radius: 7px;
+}
+#containerdone {
+    margin: 0 auto;
+    width: 75%;
+    height: 300px;
+    background-color: rgba(170, 168, 163, 0.65);
+    position: relative;
+    top: 2rem;
     border-radius: 7px;
 }
 .title {
