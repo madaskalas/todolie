@@ -8,7 +8,12 @@ function tasklist() {
     // Fetch value of input text
     let task = document.getElementById("userinput").value;
 
-    // Select DIV
+    if (task == "") {
+        alert(`Please type something.`);
+    }
+
+    else {
+        // Select DIV
     let todolist = document.querySelector(".todolist");
 
     // Clears text input
@@ -23,6 +28,7 @@ function tasklist() {
     // Generates a random number
     let random = Math.floor(Math.random() * 1000);
     let randomlabel = Math.floor(Math.random() * 1001 + 1000);
+    let randombr = Math.floor(Math.random() * 100);
 
     // Assign attributes
     input.type = "checkbox";
@@ -46,6 +52,7 @@ function tasklist() {
 
     // Create br element
     let br = document.createElement("br");
+    br.id = randombr;
 
     // Append child
     todolist.appendChild(br);
@@ -56,6 +63,7 @@ function tasklist() {
 
     let t1 = document.querySelectorAll(".checkclass");
     let t2 = document.querySelectorAll(".labelclass");
+    // let t3 = document.getElementById(randombr);
     console.log(t1);
     console.log(t2);
 
@@ -65,16 +73,28 @@ function tasklist() {
                 console.log(`Checked ${i}: ${t1[i].value}`);
                 t2[i].style.textDecoration = "line-through";
                 t2[i].style.backgroundColor = "lightgreen";
-                // document.getElementById(random).style.display = "none";
-                // document.getElementById(randomlabel).style.display = "none";
+                t1[i].parentElement.removeChild(t1[i]);
+                t2[i].parentElement.removeChild(t2[i]);
+                // t3.parentElement.removeChild(t3);
+                console.log(`Send to arrListDone`);
+                arrListDone.push(arrList[i]);
+                console.log(arrListDone);
             }
             else {
                 console.log(`Not Checked ${i}: ${t1[i].value}`);
                 t2[i].style.textDecoration = "none";
                 t2[i].style.backgroundColor = "lightgray";
+                arrListDone.splice(i, 1);
+                console.log(arrListDone);
             }
         }
     }
+    } 
+}
+
+// Move task to done list
+function donelist() {
+
 }
 
 // Reloads the webpage
