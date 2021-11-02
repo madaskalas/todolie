@@ -27,18 +27,23 @@
     <main>
         <div class="input-container">
             <div id="msg">What do you want to get done today?</div>
+            <div id="msg">(Enter the name of the list)</div>
             <form>
                 <label for="task"></label>
                 <input type="text" id="userinput" name="task" placeholder="e.g Pay Bills...">
+                <input type="text" id="namelist" name="namelist" placeholder="e.g Shopping List...">
                 <input type="button" value="Add" id="btn" onclick="tasklist()" title="✔️ Adds an item to list">
                 <button onclick="reset()" title="🔃 Refreshes the page">Reset</button>
             </form>
+            <br>
+            <p id="warning"></p>
+            <p id="warning1"></p>
             
         </div>
 
         <!-- Container -->
         <div id="containertodo">
-            <div class="todo">To Do's</div>
+            <div class="todo"></div>
             <div class="todolist"></div>
         </div>
         <div id="containerdone">

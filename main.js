@@ -7,13 +7,27 @@ function tasklist() {
 
     // Fetch value of input text
     let task = document.getElementById("userinput").value;
+    let namelist = document.getElementById("namelist").value;
+    console.log(`Name of list: ${namelist}`);
 
-    if (task == "") {
-        alert(`Please type something.`);
+    if (namelist == "") {
+        document.getElementById("warning1").innerHTML = "Please give a name for the list.";
+        document.getElementById("warning1").style.display = "block";
+    }
+    else {
+        document.getElementById("warning1").style.display = "none";
+        document.getElementById("namelist").disabled = true;
     }
 
+    let todolistname = document.querySelector(".todo").innerHTML = namelist;
+
+    if (task == "") {
+        document.getElementById("warning").innerHTML = "Please give a task!";
+        document.getElementById("warning").style.display = "block";
+    }
     else {
-        // Select DIV
+        document.getElementById("warning").style.display = "none";
+    // Select DIV
     let todolist = document.querySelector(".todolist");
 
     // Clears text input
@@ -63,22 +77,25 @@ function tasklist() {
 
     let t1 = document.querySelectorAll(".checkclass");
     let t2 = document.querySelectorAll(".labelclass");
-    // let t3 = document.getElementById(randombr);
+    let t3 = document.getElementById(randombr);
     console.log(t1);
     console.log(t2);
 
     for (let i = 0; i <= arrList.length - 1; i++) {
+        console.log(`Before onclick: ${i}`);
+        // console.log(t1[i]);
         t1[i].onclick = () => {
             if (t1[i].checked) {
                 console.log(`Checked ${i}: ${t1[i].value}`);
                 t2[i].style.textDecoration = "line-through";
                 t2[i].style.backgroundColor = "lightgreen";
-                t1[i].parentElement.removeChild(t1[i]);
-                t2[i].parentElement.removeChild(t2[i]);
+                // t1[i].parentElement.removeChild(t1[i]);
+                // t2[i].parentElement.removeChild(t2[i]);
                 // t3.parentElement.removeChild(t3);
-                console.log(`Send to arrListDone`);
                 arrListDone.push(arrList[i]);
+                console.log(`Push to arrListDone`);
                 console.log(arrListDone);
+                console.log(`EndIf: ${i}`);
             }
             else {
                 console.log(`Not Checked ${i}: ${t1[i].value}`);
@@ -89,7 +106,7 @@ function tasklist() {
             }
         }
     }
-    } 
+    }  
 }
 
 // Move task to done list
