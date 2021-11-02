@@ -1,12 +1,30 @@
 // Create empty array
 let arrList = [];
 let arrListDone = [];
+let taskEnter = document.getElementById("userinput");
+let nameEnter = document.getElementById("namelist");
+
+taskEnter.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        tasklist(e);
+    }
+});
+
+nameEnter.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        tasklist(e);
+    }
+});
+
+
 
 // Trigger on button "Add"
 function tasklist() {
 
     // Fetch value of input text
-    let task = document.getElementById("userinput").value;
+    task = document.getElementById("userinput").value;
     let namelist = document.getElementById("namelist").value;
     console.log(`Name of list: ${namelist}`);
 
@@ -20,6 +38,7 @@ function tasklist() {
     else {
         document.getElementById("warning").style.display = "none";
         document.getElementById("namelist").disabled = true;
+        document.getElementById("namelist").title = "🚫 Disabled!";
         // Select DIV
         let todolist = document.querySelector(".todolist");
 
@@ -108,8 +127,7 @@ function donelist() {
 }
 
 // Reloads the webpage
+
 function reset() {
     location.reload();
-}
-
-
+};
