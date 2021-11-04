@@ -8,7 +8,6 @@
     <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
-
     <!-- Header -->
     <header>
         
@@ -16,11 +15,7 @@
         <div class="img-container">
             <img src="/assets/logo.png"/>
         </div>
-
-    <!-- Navigation -->
-    <nav>
-
-    </nav>
+        
     </header>
 
     <!-- Main Area -->
@@ -33,23 +28,17 @@
                 <input type="text" id="userinput" name="task" placeholder="e.g Pay Bills...">
                 <input type="text" id="namelist" name="namelist" placeholder="e.g Shopping List...">
                 <input type="button" value="Add" id="btn" onclick="tasklist()" title="✔️ Adds an item to list">
-                <!-- <input type="button" value="Reset" id="btn" onclick="reset()" title="🔃 Refreshes the page"> -->
                 <button onclick="reset()" id="reset" title="🔃 Refreshes the page">Reset</button>
             </form>
             <br>
             <p id="warning"></p>
-            <p id="warning1"></p>
-            
+            <p id="warning1"></p> 
         </div>
 
         <!-- Container -->
         <div id="containertodo">
             <div class="todo"></div>
             <div id="todolistbr" class="todolist"></div>
-        </div>
-        <div id="containerdone">
-            <div class="done">Done</div>
-            <div class="donelist"></div>
         </div>
     </main>
 

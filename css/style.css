@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    /* border: 1px solid black; */
 }
 
 /* Body */
@@ -156,6 +155,8 @@ label {
     position: relative;
     top: 2rem;
 }
+
+/* Links */
 a, a:visited {
     color: black;
     text-decoration: none;
