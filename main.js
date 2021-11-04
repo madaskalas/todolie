@@ -103,8 +103,14 @@ function tasklist() {
         let t1 = document.querySelectorAll(".checkclass");
         let t2 = document.querySelectorAll(".labelclass");
         let t3 = document.getElementById(randombr);
+        let t4 = document.getElementById(btnrem);
         console.log(t1);
         console.log(t2);
+        console.log(t4);
+
+        t4.onclick = () => {
+            console.log(`Button clicked! ${btnrem}`);
+        }
 
         for (let i = 0; i <= arrList.length - 1; i++) {
             console.log(`Before onclick: ${i}`);
@@ -132,11 +138,6 @@ function tasklist() {
             }
         }
         }  
-}
-
-// Move task to done list
-function donelist() {
-
 }
 
 // Reloads the webpage
