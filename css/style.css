@@ -57,7 +57,7 @@ input[type=text] {
 input[type=text]:hover {
     background-color: rgba(240, 158, 8, 0.65);
 }
-input[type=button], button {
+#btn, #reset {
     width: 5rem;
     height: 2.2rem;
     padding: 0.4rem;
@@ -65,7 +65,7 @@ input[type=button], button {
     color: white;
     border-radius: 4px;
 }
-input[type=button]:hover, button:hover {
+#btn:hover, #reset:hover {
     cursor: pointer;
 }
 input[type="checkbox"] {
@@ -93,6 +93,12 @@ input[type="checkbox"] {
 }
 label {
     margin: 1.5rem;
+}
+.btnclass {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    bottom: 0.2rem;
 }
 #containertodo {
     margin: 0 auto;
@@ -137,4 +143,24 @@ label {
     img {
         width: 300px;
     }
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    font-size: 110%;
+    background-color: rgb(236, 232, 232);
+    margin: 0 auto;
+    width: 75%;
+    position: relative;
+    top: 2rem;
+}
+a, a:visited {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    font-weight: bold;
+    text-decoration: underline;
 }

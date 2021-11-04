@@ -4,6 +4,7 @@ let arrListDone = [];
 let taskEnter = document.getElementById("userinput");
 let nameEnter = document.getElementById("namelist");
 
+// Insert on key Enter
 taskEnter.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
         e.preventDefault();
@@ -55,6 +56,7 @@ function tasklist() {
         let random = Math.floor(Math.random() * 1000);
         let randomlabel = Math.floor(Math.random() * 1001 + 1000);
         let randombr = Math.floor(Math.random() * 100);
+        let btnrem = Math.floor(Math.random() * 1001 + 2000);
 
         // Assign attributes
         input.type = "checkbox";
@@ -71,10 +73,21 @@ function tasklist() {
         label.id = randomlabel;
         label.className = "labelclass";
 
+        // Create button
+        let btnremove = document.createElement("input");
+
+        // Assign buttton attributes
+        btnremove.type = "button";
+        btnremove.value = "X";
+        btnremove.id = btnrem;
+        btnremove.title = "Remove";
+        btnremove.className = "btnclass";
+
         // Append childs
         label.appendChild(document.createTextNode(task));
         todolist.appendChild(input);
         todolist.appendChild(label);
+        todolist.appendChild(btnremove);
 
         // Create br element
         let br = document.createElement("br");
