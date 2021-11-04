@@ -19,15 +19,13 @@ nameEnter.addEventListener("keydown", function (e) {
     }
 });
 
-
-
 // Trigger on button "Add"
 function tasklist() {
 
     // Fetch value of input text
     task = document.getElementById("userinput").value;
     let namelist = document.getElementById("namelist").value;
-    console.log(`Name of list: ${namelist}`);
+    // console.log(`Name of list: ${namelist}`);
 
     let todolistname = document.querySelector(".todo").innerHTML = namelist;
 
@@ -80,7 +78,7 @@ function tasklist() {
         btnremove.type = "button";
         btnremove.value = "X";
         btnremove.id = btnrem;
-        btnremove.title = "Remove";
+        btnremove.title = "❌ Remove item";
         btnremove.className = "btnclass";
 
         // Append childs
@@ -98,42 +96,53 @@ function tasklist() {
 
         // Push to array
         arrList.push(task);
-        console.log(arrList);
+        // console.log(arrList);
 
         let t1 = document.querySelectorAll(".checkclass");
         let t2 = document.querySelectorAll(".labelclass");
         let t3 = document.getElementById(randombr);
         let t4 = document.getElementById(btnrem);
-        console.log(t1);
-        console.log(t2);
-        console.log(t4);
+        // console.log(t1);
+        // console.log(t2);
+        // console.log(t4);
 
         t4.onclick = () => {
             console.log(`Button clicked! ${btnrem}`);
+            let parent = document.getElementById(randombr);
+            let varbr =  parent.getElementsByTagName("br");
+            parent.parentElement.removeChild(parent);
+
+            let randomrem = document.getElementById(random);
+            let randomlblrem = document.getElementById(randomlabel);
+            // randomrem.parentElement.removeChild(randomrem);
+            // randomlblrem.parentElement.removeChild(randomlblrem);
+            // t4.parentElement.removeChild(t4);
+            randomrem.style.display = "none";
+            randomlblrem.style.display = "none";
+            t4.style.display = "none";
         }
 
         for (let i = 0; i <= arrList.length - 1; i++) {
-            console.log(`Before onclick: ${i}`);
-            // console.log(t1[i]);
             t1[i].onclick = () => {
                 if (t1[i].checked) {
                     console.log(`Checked ${i}: ${t1[i].value}`);
                     t2[i].style.textDecoration = "line-through";
                     t2[i].style.backgroundColor = "lightgreen";
-                    // t1[i].parentElement.removeChild(t1[i]);
-                    // t2[i].parentElement.removeChild(t2[i]);
-                    // t3.parentElement.removeChild(t3);
+                    /*
                     arrListDone.push(arrList[i]);
                     console.log(`Push to arrListDone`);
                     console.log(arrListDone);
                     console.log(`EndIf: ${i}`);
+                    */
                 }
                 else {
                     console.log(`Not Checked ${i}: ${t1[i].value}`);
                     t2[i].style.textDecoration = "none";
                     t2[i].style.backgroundColor = "lightgray";
+                    /*
                     arrListDone.splice(i, 1);
                     console.log(arrListDone);
+                    */
                 }
             }
         }
@@ -141,7 +150,6 @@ function tasklist() {
 }
 
 // Reloads the webpage
-
 function reset() {
     location.reload();
 };
