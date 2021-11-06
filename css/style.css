@@ -42,6 +42,8 @@ img {
     font-style: italic;
     font-weight: bold;
     text-decoration: underline;
+    position: relative;
+    left: 1.6rem;
 }
 
 /* Input */ 
@@ -76,7 +78,7 @@ input[type="checkbox"] {
     background-color: lightgrey;
 }
 #namelist {
-    width: 15%;
+    width: 12rem;
     height: 2rem;
     text-align: center;
     font-size: 110%;
@@ -101,11 +103,12 @@ label {
 }
 #containertodo {
     margin: 0 auto;
-    width: 75%;
+    width: 45%;
     height: 300px;
     background-color: rgba(170, 168, 163, 0.65);
     position: relative;
     top: 1rem;
+    left: 1.5rem;
     display: none;
     border-radius: 7px;
 }
@@ -151,9 +154,11 @@ label {
     font-size: 110%;
     background-color: rgb(236, 232, 232);
     margin: 0 auto;
-    width: 75%;
+    width: 45%;
+    height: 2rem;
     position: relative;
     top: 2rem;
+    left: 1.5rem;
 }
 
 /* Links */
