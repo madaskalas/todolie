@@ -1,6 +1,7 @@
 # todolie
 
 > This is a web based todo app.
+<<<<<<< HEAD
 > Live demo [_here_](https://www.mariosdaskalas.gr/todolie).
 
 ## Table of Contents
@@ -24,7 +25,10 @@
 
 ## Screenshots
 
+<<<<<<< HEAD
 ![Home](https://mariosdaskalas.gr/todolie/scrot/scrot1.png)
+=======
+![Home](http://websource.gr/todolie/scrot/scrot1.png)
 
 ## Project Status
 
